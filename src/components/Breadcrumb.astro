@@ -25,6 +25,9 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
 }
 
 // Create BreadcrumbList structured data
+const siteUrl = SITE.website.endsWith("/")
+  ? SITE.website.slice(0, -1)
+  : SITE.website;
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -33,7 +36,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Beranda",
-      item: SITE.website,
+      item: `${siteUrl}/`,
     },
     ...currentUrlPath
       .split("/")
@@ -42,10 +45,10 @@ const breadcrumbSchema = {
         "@type": "ListItem",
         position: index + 2,
         name: decodeURIComponent(segment),
-        item: `${SITE.website}${currentUrlPath
+        item: `${siteUrl}${currentUrlPath
           .split("/")
           .slice(0, index + 2)
-          .join("/")}`,
+          .join("/")}/`,
       })),
   ],
 };
