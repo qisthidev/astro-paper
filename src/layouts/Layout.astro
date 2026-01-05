@@ -32,6 +32,10 @@ const {
 
 const socialImageURL = new URL(ogImage, Astro.url);
 
+// Ensure canonicalURL is a string
+const canonicalURLString =
+  typeof canonicalURL === "string" ? canonicalURL : canonicalURL.href;
+
 // Create structured data based on page type
 const isBlogPost = pubDatetime !== undefined;
 
@@ -88,9 +92,9 @@ const blogPostSchema = isBlogPost
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": canonicalURL.href,
+        "@id": canonicalURLString,
       },
-      url: canonicalURL.href,
+      url: canonicalURLString,
       inLanguage: SITE.lang || "en",
       ...(tags && tags.length > 0 && { keywords: tags.join(", ") }),
     }
