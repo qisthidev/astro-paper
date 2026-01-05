@@ -1,37 +1,37 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "Tentang"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+AstroPaper adalah template blog yang minimal, mudah diakses, dan ramah SEO yang dibangun dengan [Astro](https://astro.build/) dan [Tailwind CSS](https://tailwindcss.com/).
 
 ![Astro Paper](public/astropaper-og.jpg)
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+AstroPaper menyediakan fondasi yang solid untuk blog, atau bahkan portfolio\_ dengan dukungan markdown lengkap, mode gelap bawaan, dan tata letak yang bersih yang berfungsi langsung dari awal.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+Artikel blog dalam template ini juga berfungsi sebagai panduan, dokumentasi, atau contoh artikel\_ menjadikan AstroPaper titik awal yang fleksibel untuk situs berbasis konten Anda berikutnya.
 
-## Features
+## Fitur
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+AstroPaper hadir dengan serangkaian fitur berguna yang membuat penerbitan konten menjadi mudah dan efektif:
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+- Ramah SEO
+- Performa cepat
+- Mode terang & gelap
+- Sangat dapat disesuaikan
+- Artikel blog yang terorganisir
+- Responsif & mudah diakses
+- Pencarian statis dengan [PageFind](https://pagefind.app/)
+- Pembuatan gambar sosial otomatis
 
-and so much more.
+dan masih banyak lagi.
 
-## Show your support
+## Tunjukkan dukungan Anda
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+Jika Anda menyukai [AstroPaper](https://github.com/satnaing/astro-paper), pertimbangkan untuk memberikan bintang ⭐️.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+Menemukan bug 🐛 atau memiliki perbaikan ✨ dalam pikiran? Jangan ragu untuk membuka [issue](https://github.com/satnaing/astro-paper/issues), mengirim [pull request](https://github.com/satnaing/astro-paper/pulls) atau memulai [diskusi](https://github.com/satnaing/astro-paper/discussions).
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+Jika Anda merasa template ini bermanfaat, Anda juga dapat [mensponsori saya di GitHub](https://github.com/sponsors/satnaing) atau [membelikan saya kopi](https://buymeacoffee.com/satnaing) untuk menunjukkan dukungan Anda — setiap sen sangat berarti.
 
-Kyay zuu! 🙏🏼
+Terima kasih! 🙏🏼
