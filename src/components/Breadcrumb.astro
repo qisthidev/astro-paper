@@ -1,4 +1,6 @@
 ---
+import { SITE } from "@/config";
+
 // Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
@@ -21,6 +23,35 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
     `${breadcrumbList[1]} ${Number(breadcrumbList[2]) === 1 ? "" : "(halaman " + breadcrumbList[2] + ")"}`
   );
 }
+
+// Create BreadcrumbList structured data
+const siteUrl = SITE.website.endsWith("/")
+  ? SITE.website.slice(0, -1)
+  : SITE.website;
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Beranda",
+      item: `${siteUrl}/`,
+    },
+    ...currentUrlPath
+      .split("/")
+      .slice(1)
+      .map((segment, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: decodeURIComponent(segment),
+        item: `${siteUrl}${currentUrlPath
+          .split("/")
+          .slice(0, index + 2)
+          .join("/")}/`,
+      })),
+  ],
+};
 ---
 
 <nav class="app-layout mt-8 mb-1" aria-label="navigasi breadcrumb">
@@ -55,3 +86,10 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
     }
   </ul>
 </nav>
+
+<!-- BreadcrumbList Structured Data -->
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify(breadcrumbSchema)}
+/>

@@ -7,6 +7,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
 import Pagination from "@/components/Pagination.astro";
+import ItemListSchema from "@/components/ItemListSchema.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import getPostsByTag from "@/utils/getPostsByTag";
 import { SITE } from "@/config";
@@ -43,6 +44,12 @@ const { page, tagName } = Astro.props;
       {page.data.map(data => <Card {...data} />)}
     </ul>
   </Main>
+
+  <ItemListSchema
+    items={page.data}
+    pageTitle={`Tag: ${tagName}`}
+    pageDesc={`Semua artikel dengan tag "${tagName}".`}
+  />
 
   <Pagination {page} />
 
