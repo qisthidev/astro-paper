@@ -1,7 +1,7 @@
 {
   "name": "astro-paper",
   "type": "module",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind public/",
@@ -24,6 +24,7 @@
     "remark-toc": "^9.0.0",
     "satori": "^0.18.3",
     "sharp": "^0.34.5",
+    "slugify": "^1.6.6",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
